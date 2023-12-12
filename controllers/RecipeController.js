@@ -54,12 +54,13 @@ const updateRecipe=async(req,res)=>{
 const findAll=async(req,res)=>{
    
         const id=req.params.id
-            if(err){
-                res.sendStatus(403)
-            }else{
+           try{
                 const u=await db.find();
                 res.status(200).send(u);
                 
+            }
+            catch(e){
+                console.log(e)
             }
        
         

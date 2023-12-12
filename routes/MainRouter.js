@@ -5,7 +5,7 @@ router.post("/createAccount", loginController.createAccount);
 router.post('/login',loginController.checkLogin)
 router.post('/createRecipe',loginController.verifyToken,recipeController.createRecipe)
 router.put('/updateRecipe/:id',loginController.verifyToken,recipeController.updateRecipe)
-router.get('/findAll',loginController.verifyToken,recipeController.findAll)
+router.get('/findAll',recipeController.findAll)
 router.delete('/delete/:id',loginController.verifyToken,recipeController.deleteRecipe)
 router.get('/find/:id',loginController.verifyToken,recipeController.findOne)
 router.get('/findAuthor/:author',loginController.verifyToken,recipeController.findByAuthor)

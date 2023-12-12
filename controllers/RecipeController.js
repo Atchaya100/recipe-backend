@@ -47,9 +47,7 @@ const updateRecipe=async(req,res)=>{
             }else{
                 const u=await db.updateOne({_id:id},{$set:recipe})
                 res.status(200).send(u);
-                
             }
-       
         })
    
 }

@@ -7,6 +7,6 @@ router.post('/createRecipe',loginController.verifyToken,recipeController.createR
 router.put('/updateRecipe/:id',loginController.verifyToken,recipeController.updateRecipe)
 router.get('/findAll',recipeController.findAll)
 router.delete('/delete/:id',loginController.verifyToken,recipeController.deleteRecipe)
-router.get('/find/:id',loginController.verifyToken,recipeController.findOne)
+router.get('/find/:id',recipeController.findOne)
 router.get('/findAuthor/:author',loginController.verifyToken,recipeController.findByAuthor)
 module.exports=router

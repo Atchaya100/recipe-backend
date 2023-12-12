@@ -69,16 +69,15 @@ const findAll=async(req,res)=>{
 const findOne=async(req,res)=>{
    
     const id=req.params.id
-    jwt.verify(req.token,process.env.secret_key,async (err,authData)=>{
-        if(err){
-            res.sendStatus(403)
-        }else{
-            const u=await db.findOne({_id:id});
+    
+        try{    const u=await db.findOne({_id:id});
             res.status(200).send(u);
             
         }
-   
-    })
+        catch(e){
+            console.log(e)
+        }
+  
 
 }
 const findByAuthor=async(req,res)=>{

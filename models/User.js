@@ -18,18 +18,6 @@ const userSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    recipes:{
-        type:[{
-            _id:String,
-            author:String,
-            name:String,
-            category:String,
-            time:String,
-            ingredients:String,
-            instructions:String,
-            benefits:String
-        }]
-    },
     saved:{
         type:[{}]
     }

@@ -22,7 +22,6 @@ const createRecipe=async(req,res)=>{
             }else{
                 const author=req.body.author;
                 const u=await recipe.save();
-                await db1.updateOne({username:author},{$push:{recipes:u}})
                 res.status(200).send(u);
                 
             }

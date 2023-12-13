@@ -28,9 +28,6 @@ const recipeSchema = new mongoose.Schema({
     benefits:{
         type:String,
         required:true
-    },
-    comments:{
-        type:[{}]
     }
 },
 {
